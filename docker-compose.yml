@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+
+  flask:
+    container_name: mortgage-calculator-api
+    image: iwane/numpy
+    volumes:
+      - ./app:/app
+      - pycache:/app/__pycache__
+    working_dir: /app
+    ports:
+      - 5000:5000
+    command: sh -c "pip install -r requirements.txt && python3 app.py"
+    env_file:
+      - .env
+
+volumes:
+  pycache:

@@ -1,0 +1,11 @@
+/.vscode
+/.idea
+/venv
+/app/__pycache__
+.coverage
+.env
+*.code-workspace
+
+
+
+
